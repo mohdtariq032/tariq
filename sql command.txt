@@ -1,0 +1,119 @@
+https://www.sqlshack.com/getting-started-with-the-sql-update-syntax/
+
+
+
+SELECT DISTINCT Statement  ==> (The SELECT DISTINCT statement is used to return only distinct (different) values.)
+        
+1) SELECT DISTINCT column1, column2 FROM table_name;
+
+2) SELECT COUNT(DISTINCT column-name) FROM table_name;
+
+3) SELECT Count(*) AS DistinctCountries FROM (SELECT DISTINCT column-name FROM table_name);        (Not Understand)
+
+
+WHERE Clause ==>
+    
+1) SELECT (column1, column2) FROM table_name WHERE column-name (=, >, <, >=, <=, <>) value;
+
+2) SELECT * FROM table_name WHERE column-name (=, >, <, >=, <=, <>) value;
+
+3) SELECT * FROM table_name WHERE column-name LIKE 'prefix%';
+
+4) SELECT * FROM table_name WHERE column-name IN ('value1','value2');
+
+
+AND, OR and NOT Operators ==>
+         
+1) SELECT column1, column2 FROM table_name WHERE condition1 AND condition2 AND condition3;     ( condition =column-name (=, >, <, >=, <=, <>)value)
+
+2) SELECT column1, column2 FROM table_name WHERE condition1 OR condition2 OR condition3;
+
+3) SELECT column1, column2 FROM table_name WHERE NOT condition;
+
+
+SQL ORDER BY Keyword ==>
+
+1) SELECT column1, column2 FROM table_name ORDER BY column1, column2 ASC/DESC;
+
+
+SQL INSERT INTO Statement ==>
+
+1) INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);    (Specify both the column names and the values to be inserted:)
+
+2) INSERT INTO table_name VALUES (value1, value2, value3);      ( If you are adding values for all the columns of the table)
+
+
+SQL NULL/NOT NULL Values ==>  
+
+1) SELECT column_names FROM table_name WHERE column_name IS NULL;
+
+2) SELECT column_names FROM table_name WHERE column_name IS NOT NULL;
+
+
+SQL UPDATE Statement ==>
+
+1) UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+
+
+SQL DELETE Statement ==>
+
+1) DELETE FROM table_name;                           (Delete All Records)
+2) DELETE FROM table_name WHERE condition;           (DELETE statement is used to delete existing records in a table)
+
+
+SQL SELECT TOP Clause ==>
+
+1)SELECT TOP number|percent column_name(s) FROM table_name WHERE condition;      /****( SELECT TOP 3 * FROM Customers WHERE Country='Germany';)********/ 
+
+
+SQL MIN() and MAX() Function ==>
+
+1) SELECT MIN(column_name) FROM table_name WHERE condition;       (AS SmallestPrice for alias)
+
+2) SELECT MAX(column_name) FROM table_name WHERE condition;       (AS SmallestPrice for alias) 
+
+
+SQL COUNT(), AVG() and SUM() Functions  ==>
+
+1)SELECT COUNT(column_name) FROM table_name WHERE condition;
+2)SELECT AVG(column_name) FROM table_name WHERE condition;
+3)SELECT SUM(column_name) FROM table_name WHERE condition;
+
+
+SQL LIKE Operator ==>
+
+   LIKE Operator Description
+   WHERE CustomerName LIKE 'a%'	    Finds any values that start with "a";
+   WHERE CustomerName LIKE '%a'	    Finds any values that end with "a";
+   WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+   WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+   WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+   WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+   WHERE ContactName LIKE 'a%o'	    Finds any values that start with "a" and ends with "o"
+
+1)SELECT column1, column2 FROM table_name WHERE columnN LIKE pattern('a%', '%a', '%or%', '_r%', 'a_%', 'a__%, 'a%o' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
